@@ -2,3 +2,170 @@
 
 2.- Segun el ejercicio de la profe, debo modificar nuevamente el archivo y luego registrar los cambios.
 
+Ahora paso a copiar todo los pasos realizados:
+**********************************************
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT
+$ ls -ltrh
+total 0
+drwxr-xr-x 1 david 197609 0 abr. 12 12:42 ejercicios2018-dtupac/
+drwxr-xr-x 1 david 197609 0 abr. 18 20:10 Ejer_Rep_Local/
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT
+$ cd Ejer
+Ejer_Rep_Local/        ejercicios2018-dtupac/
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT
+$ cd Ejer_Rep_Local/
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local
+$
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local
+$
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local
+$ git init
+Initialized empty Git repository in D:/Lab_Comp_II_GIT/Ejer_Rep_Local/.git/
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local (master)
+$ vi archivo_nuevo.txt
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local (master)
+$ ls -ltrh
+total 1,0K
+-rw-r--r-- 1 david 197609 74 abr. 18 20:12 archivo_nuevo.txt
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        archivo_nuevo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local (master)
+$ git add .
+warning: LF will be replaced by CRLF in archivo_nuevo.txt.
+The file will have its original line endings in your working directory.
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   archivo_nuevo.txt
+
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local (master)
+$ git commit -m "Creo y edito mi primer archivo en repo local"
+[master (root-commit) 872650a] Creo y edito mi primer archivo en repo local
+ 1 file changed, 1 insertion(+)
+ create mode 100644 archivo_nuevo.txt
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local (master)
+$ git log
+commit 872650ac374ffaf1e5429dbdee785dc06943677a (HEAD -> master)
+Author: dtupac <1818508@ucc.edu.ar>
+Date:   Wed Apr 18 20:14:30 2018 -0300
+
+    Creo y edito mi primer archivo en repo local
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local (master)
+$ ls -ltrh
+total 1,0K
+-rw-r--r-- 1 david 197609 74 abr. 18 20:12 archivo_nuevo.txt
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local (master)
+$ vi archivo_nuevo.txt
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local (master)
+$ cat archivo_nuevo.txt
+1.- Este es mi primer archivo, lo estoy editando con mis primeras lineas.
+
+2.- Segun el ejercicio de la profe, debo modificar nuevamente el archivo y luego registrar los cambios.
+
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   archivo_nuevo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local (master)
+$ git add -a
+error: unknown switch `a'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --chmod <(+/-)x>      override the executable bit of the listed files
+
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local (master)
+$ git add -A
+warning: LF will be replaced by CRLF in archivo_nuevo.txt.
+The file will have its original line endings in your working directory.
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   archivo_nuevo.txt
+
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local (master)
+$ git commit -m "Agrego una segunda linea a mi texto"
+[master 5398994] Agrego una segunda linea a mi texto
+ 1 file changed, 3 insertions(+)
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local (master)
+$ git log
+commit 5398994d3ad44901fc4256e1d5c63adf9a871b7d (HEAD -> master)
+Author: dtupac <1818508@ucc.edu.ar>
+Date:   Wed Apr 18 20:19:20 2018 -0300
+
+    Agrego una segunda linea a mi texto
+
+commit 872650ac374ffaf1e5429dbdee785dc06943677a
+Author: dtupac <1818508@ucc.edu.ar>
+Date:   Wed Apr 18 20:14:30 2018 -0300
+
+    Creo y edito mi primer archivo en repo local
+
+david@Z97-DELUXE-W10 MINGW64 /d/Lab_Comp_II_GIT/Ejer_Rep_Local (master)
+
